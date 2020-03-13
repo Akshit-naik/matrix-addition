@@ -1,0 +1,54 @@
+Matrix addition
+
+#include<stdio.h> 
+#include<conio.h> 
+void main() 
+{ 
+int m1[10][10],m2[10][10],c1,r1,c2,r2,i,j; 
+printf("Enter the no of columns of M1:"); 
+scanf("%d",&c1); 
+printf("Enter the no of rows of M1:"); 
+scanf("%d",&r1); 
+printf("Enter the no of columns of M2:"); 
+scanf("%d",&c2); 
+printf("Enter the no of rows of M2:"); 
+scanf("%d",&r2); 
+if(c1==c2&&r1==r2) 
+{ 
+printf("\nEnter the %d elements of m1:",c1*r1); 
+for(i=0;i<r1;i++) 
+{ 
+for(j=0;j<c1;j++) 
+scanf("%d",&m1[i][j]); 
+} 
+printf("\nEnter the %d elements of m2:",c2*r2); 
+for(i=0;i<r2;i++) 
+{ 
+for(j=0;j<c2;j++) 
+scanf("%d",&m2[i][j]); 
+} 
+printf("The first matrix is:\n"); 
+for(i=0;i<r1;i++) 
+{ 
+for(j=0;j<c1;j++) 
+printf("%3d",m1[i][j]); 
+printf("\n\n"); 
+} 
+printf("The second matrix is:\n"); 
+for(i=0;i<r2;i++) 
+{ 
+for(j=0;j<c2;j++) 
+printf("%3d",m2[i][j]); 
+printf("\n\n"); 
+} 
+printf("The result matrix is:\n"); 
+for(i=0;i<r2;i++) 
+{ 
+for(j=0;j<c2;j++) 
+printf("%3d",m1[i][j]+m2[i][j]); 
+printf("\n\n"); 
+} 
+} 
+else 
+printf("Matrices addition is not possible"); 
+} 
